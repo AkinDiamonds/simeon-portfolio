@@ -9,9 +9,9 @@ const works = [
   { title: "Component Library", img: "https://cdn.prod.website-files.com/64f7e0efa0923cf471f9417c/66164a50fb49143f9d0ca0d0_homepage-student-work-4-p-500.webp", tech: "React, TailwindCSS" },
 ];
 
-export default function WorksPage() {
+export default function WorkSection({worksRef}) {
   return (
-    <section className="relative bg-accent-black text-white py-16 overflow-hidden">
+    <section id="works" ref={worksRef} className="relative bg-accent-black text-white py-16 overflow-hidden">
       {/* Top mist fade (major color mixed into black) */}
       <div className="absolute top-70 left-0 w-full h-32 
         bg-linear-to-b from-accent-black to-transparent
@@ -30,7 +30,7 @@ export default function WorksPage() {
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Three looping columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-8">
           {/* Column 1 - scroll up */}
           <div className="relative h-[150vh] overflow-hidden">
             <div className="animate-scroll-up flex flex-col space-y-6">

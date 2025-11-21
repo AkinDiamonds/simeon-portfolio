@@ -2,7 +2,9 @@ import React from "react";
 import { FaReact, FaHtml5, FaJs, FaCss3Alt } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 
-export default function Hero() {
+
+
+export default function Hero({scrollToWorks}) {
   return (
     <section className="relative w-full min-h-[90vh] flex flex-col justify-center items-center px-4 text-accent-white overflow-hidden">
       
@@ -35,7 +37,7 @@ export default function Hero() {
         <p className="mt-2 text-xl drop-shadow-md text-accent-white">
           High-end Frontend Developer. Interfaces crafted with intent.
         </p>
-        <button className="px-11 py-3 m-6 bg-support border-transparent rounded-lg text-2xl text-accent-black font-body font-bold hover:bg-[#c0a7a7] cursor-pointer shadow-2xl shadow-accent-black hover:scale-101 hover:shadow-3xl transition-all duration-500">SEE MY WORKS</button>
+        <button onClick={scrollToWorks} className="px-11 py-3 m-6 bg-support border-transparent rounded-lg text-2xl text-accent-black font-body font-bold hover:bg-[#c0a7a7] cursor-pointer shadow-2xl shadow-accent-black hover:scale-101 hover:shadow-3xl transition-all duration-500">SEE MY WORKS</button>
       </div>
       <div className="pointer-events-none absolute bottom-0 left-0 w-full h-40 
         bg-linear-to-b from-transparent to-[#0d0d0d]"></div>
