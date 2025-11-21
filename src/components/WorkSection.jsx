@@ -1,4 +1,5 @@
 import React from "react"
+import { motion } from "framer-motion";
 
 const works = [
   { title: "Design System UI", img: "https://cdn.prod.website-files.com/64f7e0efa0923cf471f9417c/66164a50fb49143f9d0ca0d0_homepage-student-work-4-p-500.webp", tech: "React, TailwindCSS" },
@@ -11,6 +12,7 @@ const works = [
 
 export default function WorkSection({worksRef}) {
   return (
+    
     <section id="works" ref={worksRef} className="relative bg-accent-black text-white py-16 overflow-hidden">
       {/* Top mist fade (major color mixed into black) */}
       <div className="absolute top-70 left-0 w-full h-32 
@@ -22,10 +24,18 @@ export default function WorkSection({worksRef}) {
         bg-linear-to-t from-accent-black to-transparent
         pointer-events-none z-20" />
 
-        <p className="text-support font-body font-bold text-center text-2xl">See the difference</p>
+        <motion.p
+            initial={{opacity: 0, y: 38}}
+            whileInView={{opacity: 1, y: 0}}
+            viewport={{once:true, amount:0.25}}
+            transition={{duration: 0.8}}>
+            <p className="text-support font-body font-bold text-center text-2xl">See the difference</p>
             <h2 className="relative text-6xl font-display font-bold mb-8 text-accent-white text-center ">
                 Designs I Created
             </h2>
+
+        </motion.p>
+        
 
       <div className="max-w-7xl mx-auto px-4">
 

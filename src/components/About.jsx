@@ -15,12 +15,7 @@ import { motion } from "framer-motion";
 export default function About({aboutRef}) {
     // short content blocks based on what you provided
     const cards = [
-        {
-            id: "lead",
-            title: "High-end frontend developer",
-            body:
-                "Design excellence focused on meaning and experience. Everything has a purpose. Everything is doable.",
-        },
+        
         {
             id: "values",
             title: "What I value",
@@ -33,11 +28,17 @@ export default function About({aboutRef}) {
             body:
                 "Start from intent → refine through constraints → deliver a humane interface. I treat constraints as design opportunities.",
         },
+        
+        {
+          id: "experience",
+          title: "Experience",
+          body: "Less than 1 year"
+        },
         {
             id: "skills",
-            title: "Skills & tools",
+            title: "Skills & Tools",
             body:
-                "React  # TailwindCSS  # modern CSS patterns  # JS  # systems thinking",
+                "React   |  TailwindCSS    | modern CSS patterns   |  JS   | systems thinking",
         },
     ];
 
@@ -52,7 +53,7 @@ export default function About({aboutRef}) {
                 <header className="mb-8 flex flex-col items-center text-center gap-4">
 
                     <div className="flex flex-col items-center">
-                        <p className="text-support font-body font-bold text-2xl mb-4">
+                        <p className="text-support font-body font-bold text-2xl mb-6">
                             About
                         </p>
 
@@ -65,7 +66,7 @@ export default function About({aboutRef}) {
                         </h1>
 
                         <p className="mt-3 text-lg opacity-70 max-w-xl">
-                            High-end frontend developer. Design excellence and deliberate on meaning
+                            Design excellence and deliberate on meaning
                             and experience.
                         </p>
                     </div>
@@ -73,7 +74,7 @@ export default function About({aboutRef}) {
                     {/* read time — centered under everything */}
                     <div className="text-sm opacity-70">
                         <div className="inline-flex items-center gap-3">
-                            <span className="px-3 py-1 rounded-full bg-[rgba(0,0,0,0.25)] text-sm">
+                            <span className="px-3 py-1 rounded-full bg-black/50 text-sm">
                                 30s read
                             </span>
                             <a
@@ -272,7 +273,7 @@ export default function About({aboutRef}) {
 {/* footer detail */}
 <footer className="mt-20 text-base md:text-lg opacity-80 text-center">
   <p>
-    When I'm not coding or studying, you'll probably find me playing chess.
+    PS: When I'm not coding or studying, you'll probably find me playing chess.
   </p>
 </footer>
 
